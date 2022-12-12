@@ -11,19 +11,17 @@ Console.Write("Введите число N: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
 
-if (m > n)
+int sum = SumNaturalBeetwenNumbers(m, n);
+Console.Write(sum);
+
+int SumNaturalBeetwenNumbers(int num1, int num2)
 {
-    Console.WriteLine("Число М не может быть больше N");
-}
-else
-{
-    int sum = SumNaturalBeetwenNumbers(n, m);
-    Console.WriteLine(sum);
+    int sum = num1;
+    if (num1 > num2)
+        return sum = sum + SumNaturalBeetwenNumbers(num1 - 1, num2);
+    if (num1 < num2)
+        return sum = sum + SumNaturalBeetwenNumbers(num1 + 1, num2);
+    else return sum;
 }
 
-int SumNaturalBeetwenNumbers(int numN, int numM)
-{
-    if (numN < numM) return 0;
-    int sum = SumNaturalBeetwenNumbers(numN - 1, numM);
-    return sum += numN;
-}
+

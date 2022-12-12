@@ -11,8 +11,8 @@ int numberN = Convert.ToInt32(Console.ReadLine());
 
 if (numberM >= 0 && numberN >= 0)
 {
-    int sum = Ackerman(numberN, numberM);
-    Console.WriteLine(sum);
+    int res = Ackerman(numberN, numberM);
+    Console.WriteLine(res);
 }
 else
 {
