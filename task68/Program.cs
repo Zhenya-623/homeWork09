@@ -11,7 +11,7 @@ int numberN = Convert.ToInt32(Console.ReadLine());
 
 if (numberM >= 0 && numberN >= 0)
 {
-    int res = Ackerman(numberN, numberM);
+    int res = Ackerman(numberM, numberN);
     Console.WriteLine(res);
 }
 else
